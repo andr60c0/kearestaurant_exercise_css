@@ -8,40 +8,49 @@
     <title>Contact</title>
   </head>
   <body>
+    <header>
+      <h1>Restaurant KEA</h1>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <main>
-      <header>
-        <h1>Restaurant KEA</h1>
-      </header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <p><em>Guldberggsgade 29</em></p>
-      <p><em>2200 Copenhagen</em></p>
-      <p>
-        <em>Phone no: <span id="phonenumber">20 82 53 30 </span></em>
-      </p>
-      <p>
-        <em>E-mail: <span id="email">info@restaurantkea.dk</span></em>
-      </p>
-      <img src="img/kea_restaurant.jpg" alt="" />
+      <div class="contact_container">
+        <div class="contactinfo">
+          <p>Guldberggsgade 29</p>
+          <p>2200 Copenhagen</p>
+          <br />
+          <p>
+            Phone no: <span class="phonenumber"><strong>20 82 53 30 </strong></span>
+          </p>
+          <br />
+          <p>
+            E-mail: <span class="email"><strong>info@restaurantkea.dk</strong></span>
+          </p>
+          <br />
+        </div>
+        <div class="contact_image">
+          <img src="img/map.jpg" alt="" />
+        </div>
+      </div>
       <!-- <form id="keaRestaurant_form" action="process.php" autocomplete="on" method="GET"> -->
       <form id="keaRestaurant_form" action="mailto:info@restaurantkea.dk" autocomplete="on" method="POST">
-        <fieldset>
+        <fieldset class="form-inline">
           <legend>Contact form</legend>
           <label for="txtName">Full name</label>
-          <input id="txtName" name="txtName" type="text" size="20" maxlength="60" required tabindex="1" pattern="[a-zA-Z-]*" /><br />
+          <input id="txtName" name="txtName" type="text" size="20" maxlength="60" required tabindex="1" pattern="[a-zA-Z-]*" />
           <label for="telNumber">Phone no.</label>
-          <input id="telNumber" name="telNumber" type="tel" size="20" maxlength="8" required tabindex="1" pattern="[0-9]{8}" /><br />
+          <input id="telNumber" name="telNumber" type="tel" size="20" maxlength="8" required tabindex="1" pattern="[0-9]{8}" />
           <label for="email">E-mail</label>
-          <input id="email" name="email" type="email" size="20" maxlength="60" required tabindex="1" /><br />
+          <input id="email" name="email" type="email" size="20" maxlength="60" required tabindex="1" />
           <label for="persons">Persons</label>
-          <input id="persons" name="persons" type="number" size="20" maxlength="60" required tabindex="1" value="2" min="1" max="20" /><br />
+          <input id="persons" name="persons" type="number" size="20" maxlength="60" required tabindex="1" value="2" min="1" max="20" />
           <label for="date_and_time">Date and time</label>
-          <input id="date_and_time" name="date_and_time" type="date" size="20" maxlength="60" required tabindex="1" /><br />
-          <label for="further_information">Further information</label><br />
-          <textarea id="further_information" name="further_information" rows="3" cols="20" tabindex="12"></textarea><br />
+          <input id="date_and_time" name="date_and_time" type="datetime-local" size="20" maxlength="60" required tabindex="1" />
+          <label for="further_information">Further information</label>
+          <textarea id="further_information" name="further_information" rows="3" cols="20" tabindex="12"></textarea>
           <input type="submit" value="Send" tabindex="13" />
         </fieldset>
       </form>
